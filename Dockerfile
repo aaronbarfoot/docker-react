@@ -7,4 +7,5 @@ RUN npm run build
 
 # only take what's insaide app/build 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/
